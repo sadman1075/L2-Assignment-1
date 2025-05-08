@@ -1,7 +1,7 @@
 {
     //
-    function formatString(input: string, toUpper?: boolean): string {
-        return toUpper === false ? input.toLowerCase() : input.toUpperCase();
+    function formatString(input: string, input2?: boolean): string {
+        return input2 === false ? input.toLowerCase() : input.toUpperCase();
     }
 
 
