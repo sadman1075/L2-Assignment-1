@@ -5,21 +5,21 @@
     }
 
 
- 
+
 
 
     function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
         return items.filter(item => item.rating >= 4);
     }
 
-  
+
 
 
     function concatenateArrays<T>(...arrays: T[][]): T[] {
         return arrays.reduce((acc, curr) => acc.concat(curr), []);
     }
 
-   
+
 
 
     class Vehicle {
@@ -50,8 +50,8 @@
     }
 
 
-   
-  
+
+
 
 
     function processValue(value: string | number): number {
@@ -65,7 +65,11 @@
 
 
 
-  
+
+    interface Product {
+        name: string;
+        price: number;
+    }
 
     function getMostExpensiveProduct(products: Product[]): Product | null {
         if (products.length === 0) {
@@ -73,16 +77,24 @@
         }
         return products.reduce((max, current) => (current.price > max.price ? current : max));
     }
-   
 
 
-  
+
+    enum Day {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    }
 
     function getDayType(day: Day): string {
         return day === Day.Saturday || day === Day.Sunday ? "Weekend" : "Weekday";
     }
 
-  
+
 
     async function squareAsync(n: number): Promise<number> {
         return new Promise((resolve, reject) => {
@@ -96,7 +108,7 @@
         });
     }
 
-   
+
 
     //
 }
